@@ -19,33 +19,7 @@ SM_ENDPOINT_NAME = os.environ.get('SM_ENDPOINT_NAME')
 
 # Generative LLM 
 
-# Content Handler for Option 1 - FLAN-T5-XXL - please uncomment below if you used this option
-# class ContentHandler(LLMContentHandler):
-#     content_type = "application/json"
-#     accepts = "application/json"
 
-#     def transform_input(self, prompt, model_kwargs):
-#         input_str = json.dumps({"text_inputs": prompt, "temperature": 0, "max_length": 200})
-#         return input_str.encode('utf-8')
-    
-#     def transform_output(self, output):
-#         response_json = json.loads(output.read().decode("utf-8"))
-#         return response_json["generated_texts"][0]
-
-# Content Handler for Option 2 - Falcon40b-instruct - please uncomment below if you used this option
-# class ContentHandler(LLMContentHandler):
-#     content_type = "application/json"
-#     accepts = "application/json"
-
-#     def transform_input(self, prompt, model_kwargs):
-#         input_str = json.dumps({"inputs": prompt, "parameters": {"do_sample": False, "repetition_penalty": 1.1, "return_full_text": False, "max_new_tokens":100}})
-#         return input_str.encode('utf-8')
-    
-#     def transform_output(self, output):
-#         response_json = json.loads(output.read().decode("utf-8"))
-#         return response_json[0]["generated_text"]
-
-content_handler = ContentHandler()
     
 # SageMaker langchain integration, to assist invoking SageMaker endpoint.
 llm=SagemakerEndpoint(
