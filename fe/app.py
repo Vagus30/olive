@@ -15,11 +15,11 @@ AI_ICON = "aws.png"
 base_url = os.getenv('BASE_URL')
 headers = {'Content-Type': 'application/json'}
 
-st.set_page_config(page_title="AWSomeChat - An LLM-powered chatbot on AWS documentation")
+st.set_page_config(page_title="AWSChat - An LLM-powered chatbot on AWS ")
 
 # Sidebar contents
 with st.sidebar:
-    st.title('🤗💬 AWSomeChat App')
+    st.title('🤗💬 AWSChat App')
     st.markdown('''
     ## About
     This app is an LLM-powered chatbot built using:
@@ -29,7 +29,7 @@ with st.sidebar:
     
     ''')
     add_vertical_space(5)
-    st.write('Made with ❤️ by your AWS WWSO AIML EMEA Team')
+    st.write('Made with sagemaker and kendra')
 
 st.markdown("""
         <style>
