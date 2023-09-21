@@ -68,13 +68,13 @@ session_id = get_session()
 def refresh():
     session_id = create_session_id()
     st.session_state.session_id = session_id
-    st.session_state['generated'] = ["Hi, I'm AWSomeChat. I have lots of information on AWS documentation. How may I help you?"]
+    st.session_state['generated'] = ["Hi, I'm AWSChat. I have lots of information on Olive. How may I help you?"]
     st.session_state['past'] = []
 
 
 def clear():
     st.session_state.session_id = session_id
-    st.session_state['generated'] = ["Hi, I'm AWSomeChat. I have lots of information on AWS documentation. How may I help you?"]
+    st.session_state['generated'] = ["Hi, I'm AWSChat. I have lots of information on Olive. How may I help you?"]
     st.session_state['past'] = []
     st.session_state['input'] = ""
 
@@ -124,7 +124,7 @@ with input_container:
 # Generate empty lists for generated and past.
 # generated stores AI generated responses
 if 'generated' not in st.session_state:
-    st.session_state['generated'] = ["Hi, I'm AWSomeChat. I have lots of information on AWS documentation. How may I help you?"]
+    st.session_state['generated'] = ["Hi, I'm AWSChat. I have lots of information on Olive. How may I help you?"]
 ## past stores User's questions
 if 'past' not in st.session_state:
     st.session_state['past'] = []
